@@ -18,7 +18,7 @@ Bonus:
 */
 
 const app = Vue.createApp({
-    name: '',
+    name: 'List tasks',
     data(){
         return {
             tasks: [
@@ -26,11 +26,19 @@ const app = Vue.createApp({
                 { text: 'Fare la spesa', done: true },
                 { text: 'Fare il bucato', done: false },
                 { text: 'Imparare a programmare', done: false },
-                { text: "Scalare l'Everest", done: true }
+                { text: "Scalare l'Everest", done: true },
             ],
+            newTask: '',
             textDecoration: 'text-decoration-line-through',
         }
     },
+
+    methods: {
+        deleteTask(index){
+            this.tasks.splice(index, 1);
+        },
+    },
+
 });
 
 app.mount('#root');

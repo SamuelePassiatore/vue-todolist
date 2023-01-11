@@ -23,16 +23,17 @@
                 <figure class="mx-auto w-25">
                     <img src="https://hiringplatform.boolean.careers/images/logo.png" alt="logo" class="img-fluid">
                 </figure>
-                <div id="new-task" class="mx-auto w-50 d-flex justify-content-between">
-                    <input class="rounded-3 border border-secondary p-3" type="text" placeholder="Nuova task">
-                    <button class="rounded-2 border border-secondary">Aggiungi</button>
-                </div>
             </header>
             <main>
+                <div id="new-task" class="mx-auto w-50 d-flex justify-content-between">
+                    <input class="rounded-3 border border-secondary p-3" type="text" placeholder="Nuova task">
+                    <button class="rounded-2 border border-secondary" type="button">Aggiungi</button>
+                </div>
                 <ul class="list-group rounded-4">
-                    <li v-for="task in tasks" class="list-group-item">
+                    <li v-for="(task, i) in tasks" class="list-group-item d-flex justify-content-between align-items-center">
                         <div v-if="task.done" :class="textDecoration">{{ task.text }}</div>
                         <div v-else>{{ task.text }}</div>
+                        <i class="fa-solid fa-trash" @click="deleteTask(i)"></i>
                     </li>
                 </ul>
             </main>
