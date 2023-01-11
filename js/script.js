@@ -21,7 +21,14 @@ const app = Vue.createApp({
     name: '',
     data(){
         return {
-           
+            tasks: [
+                { text: 'Fare i compiti', done: false },
+                { text: 'Fare la spesa', done: true },
+                { text: 'Fare il bucato', done: false },
+                { text: 'Imparare a programmare', done: false },
+                { text: "Scalare l'Everest", done: true }
+            ],
+            textDecoration: 'text-decoration-line-through',
         }
     },
 });

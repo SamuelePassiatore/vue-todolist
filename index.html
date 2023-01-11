@@ -30,7 +30,10 @@
             </header>
             <main>
                 <ul class="list-group rounded-4">
-                    <li class="list-group-item">An item</li>
+                    <li v-for="task in tasks" class="list-group-item">
+                        <div v-if="task.done" :class="textDecoration">{{ task.text }}</div>
+                        <div v-else>{{ task.text }}</div>
+                    </li>
                 </ul>
             </main>
         </div>
