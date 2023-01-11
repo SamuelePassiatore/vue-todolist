@@ -28,14 +28,29 @@ const app = Vue.createApp({
                 { text: 'Imparare a programmare', done: false },
                 { text: "Scalare l'Everest", done: true },
             ],
-            newTask: '',
             textDecoration: 'text-decoration-line-through',
+            newTaskText: '',
         }
+    },
+
+    computed: {
+        newTask() {
+            let newTaskContent;
+            return newTaskContent = {
+                text: this.newTaskText,
+                done: false
+            }
+        },
     },
 
     methods: {
         deleteTask(index){
             this.tasks.splice(index, 1);
+        },
+
+        addTask (){
+            this.tasks.push(this.newTask);
+            this.newTaskText = '';
         },
     },
 

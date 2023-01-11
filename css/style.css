@@ -18,6 +18,10 @@ ul li:first-child {
     padding-top: 30px;
 }
 
+li {
+    padding: 0 50px;
+}
+
 ul li:last-child {
     padding-bottom: 30px;
 }
