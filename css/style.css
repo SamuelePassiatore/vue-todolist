@@ -14,6 +14,10 @@ button {
     gap: 10px;
 }
 
+li {
+    cursor: pointer;
+}
+
 ul li:first-child {
     padding-top: 30px;
     border-top: 0;

@@ -55,6 +55,10 @@ const app = Vue.createApp({
 
         clearInput(){
             this.newTaskText = '';
+        },
+
+        toggle(task){
+            task.done = !task.done;
         }
     },
 
