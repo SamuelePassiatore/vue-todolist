@@ -52,6 +52,10 @@ const app = Vue.createApp({
             this.tasks.push(this.newTask);
             this.newTaskText = '';
         },
+
+        clearInput(){
+            this.newTaskText = '';
+        }
     },
 
 });

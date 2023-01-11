@@ -16,14 +16,20 @@ button {
 
 ul li:first-child {
     padding-top: 30px;
+    border-top: 0;
 }
 
-li {
-    padding: 0 50px;
+.list-group-item {
+    border: 1px solid grey;
+    border-left: 0;
+    border-right: 0;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 ul li:last-child {
     padding-bottom: 30px;
+    border-bottom: 0;
 }
 
 .fa-trash {
