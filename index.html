@@ -26,7 +26,7 @@
             </header>
             <main>
                 <div id="new-task" class="mx-auto w-50 d-flex justify-content-between mb-5">
-                    <input class="rounded-3 border border-secondary p-3" type="text" placeholder="Nuova task" v-model="newTaskText" @keyup.enter="addTask" @keyup.esc="clearInput">
+                    <input class="rounded-3 border border-secondary p-3" type="text" placeholder="Nuova task" v-model.trim="newTaskText" @keyup.enter="addTask" @keyup.esc="clearInput">
                     <button class="rounded-2 border border-secondary" type="button" @click="addTask">Aggiungi</button>
                 </div>
                 <ul class="list-group rounded-4">
